@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Activar Proceso de compra y ventas</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card white darken-1">
+                    <div class="card-content black-text">
+                        <span class="card-title #fb8c00 orange-text darken-1">Activar proceso de compra y ventas</span>
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col s12 m6">
+                                        <input id="seller_email" name="seller_email" type="email"
+                                            class="seller_email validate">
+                                        <label for="seller_email">Email del vendedor</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="product_id" name="product_id" type="text"
+                                            class="product_id validate">
+                                        <label for="product_id">Id del producto</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="buyer_email" type="text" name="buyer_email" class="validate">
+                                        <label for="buyer_email">Email del comprador</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="quantity" name="quantity" type="number" class="quantity validate">
+                                        <label for="quantity">Cantidad</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="payment_date" name="payment_date" type="text"
+                                            class="datepicker payment_date validate">
+                                        <label for="Payment_date">Fecha de pago</label>
+                                    </div>
+                                    <div class="file-field input-field col s12 m6">
+                                        <div class="btn #4fc3f7 light-blue lighten-2">
+                                            <span>File factura</span>
+                                            <input type="file" class="archive_account" id="archive_account"
+                                                name="archive_account">
+                                        </div>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="tax" name="tax" type="number" class="tax validate">
+                                        <label for="tax">Impuesto</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="shipping" name="shipping" type="number" class="shipping validate">
+                                        <label for="shipping">Envio</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <input id="amount_paid " type="number" class="amount_paid validate">
+                                        <label for="amount_paid ">Monto pagado</label>
+                                    </div>
+                                    <div class="input-field col s12 m6">
+                                        <textarea id="textarea1 note" name="note"
+                                            class="note materialize-textarea"></textarea>
+                                        <label for="textarea1">Nota</label>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <a href="#" class="btn #fb8c00 orange darken-1"><i class="material-icons left">add</i>
+                                Agregar</a>
+                            <a href="#" class="btn red"><i class="material-icons left">close</i> Cancelar</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            /*Datepicker*/
+            $('.datepicker').datepicker();
+            /*Textarea*/
+            $('#textarea1');
+            M.textareaAutoResize($('#textarea1'));
+        });
+
+    </script>
+</body>
+
+</html>
